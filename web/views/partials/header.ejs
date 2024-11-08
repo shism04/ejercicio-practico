@@ -1,0 +1,13 @@
+<div class="contianer">
+    <h1>RetroBlog</h1>
+    <p>Un blog para amantes de retro</p>
+</div>
+<nav>
+    <ul>
+        <% categorias.forEach((categoria)=> { %>
+            <li><a href="#">
+                    <%= categoria %>
+                </a></li>
+        <% }) %>
+    </ul>
+</nav>

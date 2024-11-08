@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/entrada.css">
+</head>
+
+<body>
+    <header>
+        <%- include('partials/header') %>
+    </header>
+    <main>
+        <section id="entrada">
+            <img src="<%= entrada.image %>" alt="<%= entrada.image %>">
+            <h1>
+                <%= entrada.title %>
+            </h1>
+            <p>
+                <%= entrada.intro %>
+            </p>
+            <a href="/">
+                <%= entrada.category %>
+            </a>
+            <p>
+                <%- entrada.content %>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+</body>
+
+</html>

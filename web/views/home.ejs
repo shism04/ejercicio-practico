@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/home.css">
 </head>
+
 <body>
-    <h1>works! <%=head_title %></h1>
+    <header>
+        <%- include('partials/header') %>
+    </header>
+    <main>
+        <section id="blog">
+            <h1>Últimas entradas del blog</h1>
+            <div class="container">
+                <% posts.forEach((post)=> { %>
+                    <a href="/entrada/<%= post.id %>" class="contenido">
+                        <div class="box">
+                            <img src="<%= post.thumbnail %>" alt="<%= post.title || 'Imagen del post' %>">
+                        </div>
+                        <p>
+                            <%= post.title %>
+                        </p>
+                    </a>
+                    <% }) %>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
 </body>
+
 </html>
